@@ -5,9 +5,11 @@ using System;
 
 namespace DemoStore.WebUI
 {
-    public partial class DemoStoreDbDataContext : DbContext
+    public partial class DataContext : DbContext
     {
-        public DemoStoreDbDataContext(DbContextOptions<DemoStoreDbDataContext> options) : base(options)
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products  { get; set; }
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
 
