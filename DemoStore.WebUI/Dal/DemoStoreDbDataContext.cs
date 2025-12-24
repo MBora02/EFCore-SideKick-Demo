@@ -8,7 +8,8 @@ namespace DemoStore.WebUI
     public partial class DataContext : DbContext
     {
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products  { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
@@ -26,9 +27,8 @@ namespace DemoStore.WebUI
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
-
             modelBuilder.ApplyConfiguration(new CategoryEntityTypeConfiguration());
-
+            modelBuilder.ApplyConfiguration(new EmployeeEntityTypeConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }
