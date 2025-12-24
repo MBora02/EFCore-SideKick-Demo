@@ -9,7 +9,7 @@ namespace DemoStore.WebApi
         {
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddAutoMapper(typeof(AutoMappingProfile));
-
+            services.AddScoped<IEmployeeService, EmployeeService>();
             return services;
         }
     }
