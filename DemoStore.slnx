@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="DemoStore.WebApi/DemoStore.WebApi.csproj" Id="e19b76e9-dcb1-4d5e-ab16-bfe62a652f49" />
   <Project Path="DemoStore.WebUI/DemoStore.WebUI.csproj" />
 </Solution>
